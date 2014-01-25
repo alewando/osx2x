@@ -424,7 +424,7 @@
  */
 - (void)mouseMoved:(NSEvent *)theEvent
 {
-    CGMouseDelta x, y;
+    int32_t x, y;
     
     // Moved here to remove the coordinates from teh queue, required under Panther
     CGGetLastMouseDelta(&x, &y);
@@ -539,7 +539,7 @@
  */
 - (void)mouseDragged: (NSEvent *)theEvent
 {
-    CGMouseDelta x, y;
+    int32_t x, y;
     NSPoint p;
 
     if (locked && !justLocked)
@@ -592,7 +592,7 @@
 */
 - (void)rightMouseDragged: (NSEvent *)theEvent
 {
-    CGMouseDelta x, y;
+    int32_t x, y;
     NSPoint p;
 
     if (locked && !justLocked)
@@ -645,7 +645,7 @@
 */
 - (void)otherMouseDragged: (NSEvent *)theEvent
 {
-    CGMouseDelta x, y;
+    int32_t x, y;
     NSPoint p;
 
     if (locked && !justLocked)
