@@ -75,7 +75,7 @@ struct initinfo
         struct initinfo data;
 
         // first do a hostname lookup
-        host = gethostbyname([hostname cString]);
+        host = gethostbyname([hostname UTF8String]);
 
         if (host == NULL)
         {

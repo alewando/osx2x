@@ -254,7 +254,7 @@ const static NSString* OXHostNameKeyList[5] = {@"HostName", @"HostName1", @"Host
 {
     NSUserDefaults *defaults;
 	NSColor* colour;
-	float red, green, blue;
+	CGFloat red, green, blue;
 	
     defaults = [NSUserDefaults standardUserDefaults];
 	

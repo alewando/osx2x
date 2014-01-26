@@ -57,7 +57,7 @@ void XXCopyCallback(char* data)
         int fd;
         
         // Open the dislay to the 
-        display = XXConnectDisplay((char*)[hostname cString]);
+        display = XXConnectDisplay((char*)[hostname UTF8String]);
 
         if (display == NULL)
         {

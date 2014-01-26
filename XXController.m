@@ -112,7 +112,7 @@ const static NSString* OXHostNameKeyList[5] = {@"HostName", @"HostName1", @"Host
         NSMutableDictionary *childNode;
         id objects[4];
         id keys[4];
-		float red, green, blue;
+		CGFloat red, green, blue;
         
         connected = FALSE;
         inputLock = FALSE;
@@ -121,7 +121,7 @@ const static NSString* OXHostNameKeyList[5] = {@"HostName", @"HostName1", @"Host
 
         defaultValues = [NSMutableDictionary dictionary];
 
-        objects[0] = [NSString stringWithString: @"localhost:0"];
+        objects[0] = @"localhost:0";
         objects[1] = [NSNumber numberWithInt: 0];
         objects[2] = [NSNumber numberWithInt: 0];
 		objects[3] = [NSNumber numberWithInt: 0];
@@ -453,12 +453,12 @@ const static NSString* OXHostNameKeyList[5] = {@"HostName", @"HostName1", @"Host
 				serviceName = @"osx2x";
 				accountName = [NSString stringWithFormat: @"vnc://%@", host->hostname];
 			
-				SecKeychainFindGenericPassword (NULL, [serviceName cStringLength], [serviceName cString],
-												[accountName cStringLength], [accountName cString],
+				SecKeychainFindGenericPassword (NULL, [serviceName lengthOfBytesUsingEncoding: NSUTF8StringEncoding], [serviceName UTF8String],
+												[accountName lengthOfBytesUsingEncoding: NSUTF8StringEncoding], [accountName UTF8String],
 												&length, &data, NULL);
 			
 				host->password = [[NSString alloc] initWithCString: data
-															length: length];
+                                                          encoding: NSUTF8StringEncoding];
 			}
 			
 			
@@ -760,12 +760,13 @@ const static NSString* OXHostNameKeyList[5] = {@"HostName", @"HostName1", @"Host
 		serviceName = @"osx2x";
 		accountName = [NSString stringWithFormat: @"vnc://%@", host->hostname];
 		
-		SecKeychainFindGenericPassword (NULL, [serviceName cStringLength], [serviceName cString],
-										[accountName cStringLength], [accountName cString],
-										&length, &data, NULL);
+		SecKeychainFindGenericPassword (NULL, [serviceName lengthOfBytesUsingEncoding:NSUTF8StringEncoding],
+                                        [serviceName UTF8String],
+										[accountName lengthOfBytesUsingEncoding:NSUTF8StringEncoding],
+                                        [accountName UTF8String], &length, &data, NULL);
 		
-		host->password = [[NSString alloc] initWithCString: data
-													length: length];
+		host->password = [[NSString alloc] initWithCString:data
+                                                  encoding:NSUTF8StringEncoding];
 		
 		// should set password here, but ignoring for now
 		[panelPasswordBox setStringValue: host->password];
@@ -972,10 +973,12 @@ const static NSString* OXHostNameKeyList[5] = {@"HostName", @"HostName1", @"Host
 			// makes it easy to infer that the password is nothing, so I'll
 			// store the blank password in the keychain anyway
 			
-			SecKeychainAddGenericPassword(NULL, [serviceName cStringLength], [serviceName cString],
-										  [accountName cStringLength], [accountName cString],
-										  [host->password cStringLength], [host->password cString],
-										  NULL);
+			SecKeychainAddGenericPassword(NULL, [serviceName lengthOfBytesUsingEncoding:NSUTF8StringEncoding],
+                                          [serviceName UTF8String],
+                                          [accountName lengthOfBytesUsingEncoding:NSUTF8StringEncoding],
+                                          [accountName UTF8String],
+										  [host->password lengthOfBytesUsingEncoding:NSUTF8StringEncoding],
+                                          [host->password UTF8String], NULL);
 		}
 	}
 }
@@ -1345,7 +1348,7 @@ const static NSString* OXHostNameKeyList[5] = {@"HostName", @"HostName1", @"Host
     
     data =  [[aNotification userInfo] objectForKey: kCopyData];
 
-    sdata = [NSString stringWithCString: [data bytes]];
+    sdata = [NSString stringWithCString: [data bytes] encoding:NSUTF8StringEncoding];
 
     [self writeToPasteboard: [NSPasteboard generalPasteboard]
                      string: sdata];
@@ -1363,11 +1366,11 @@ const static NSString* OXHostNameKeyList[5] = {@"HostName", @"HostName1", @"Host
                           string: &str])
     {
         char* data;
-        int length = [str cStringLength]; 
+        int length = [str lengthOfBytesUsingEncoding:NSUTF8StringEncoding];
 		NSLog(@"clipboard data was: %@", str);
 
         data = (char*)malloc(length + 1);
-        [str getCString: data];
+        [str getCString:data maxLength:1 encoding:NSUTF8StringEncoding];
 
         NS_DURING
             [[remote getRemoteController] pasteToRemote: data];

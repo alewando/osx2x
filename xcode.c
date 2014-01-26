@@ -325,9 +325,9 @@ int XXEventHandler(DPYINFO* dpy)
             case SelectionRequest:
                 // Some weirdo app has requested the selection
 #if 1
-                printf("selection request dpy :%08x %08x %08x %s %s %08x\n", dpy->display, 
-					   event.xselectionrequest.target, XA_LAST_PREDEFINED, 
-					   XGetAtomName(dpy->display, event.xselectionrequest.selection), 
+                printf("selection request dpy :%08x %08x %08x %s %s %08x\n", dpy->display,
+					   event.xselectionrequest.target, XA_LAST_PREDEFINED,
+					   XGetAtomName(dpy->display, event.xselectionrequest.selection),
 					   XGetAtomName(dpy->display, event.xselectionrequest.target), dpy->targetAtom);
 #endif
 
