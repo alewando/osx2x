@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 44;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,7 +15,6 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		8D41294A0BFB69C500396206 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D4129490BFB69C500396206 /* Info.plist */; };
 		8D4129770BFB6AC400396206 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8D4129570BFB6AC400396206 /* Credits.rtf */; };
 		8D4129790BFB6AC400396206 /* keymap-de.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D4129590BFB6AC400396206 /* keymap-de.c */; };
 		8D41297A0BFB6AC400396206 /* keymap.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D41295A0BFB6AC400396206 /* keymap.c */; };
@@ -33,12 +32,12 @@
 		8D4129860BFB6AC400396206 /* XXTransparentWin.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4129740BFB6AC400396206 /* XXTransparentWin.m */; };
 		8D4129870BFB6AC400396206 /* XXView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4129760BFB6AC400396206 /* XXView.m */; };
 		8D4129930BFB6B1800396206 /* xcode.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D4129910BFB6B1800396206 /* xcode.c */; };
-		8D4129A50BFB6BCE00396206 /* libX11.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4129A40BFB6BCE00396206 /* libX11.dylib */; };
+		8D4129A50BFB6BCE00396206 /* libX11.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4129A40BFB6BCE00396206 /* libX11.6.dylib */; };
 		8D4129AB0BFB6C2000396206 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4129AA0BFB6C2000396206 /* Security.framework */; };
 		8D4129AF0BFB6C7600396206 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4129AE0BFB6C7600396206 /* Carbon.framework */; };
 		8D5D33FD0BFB6E2E000F47D5 /* osx2x.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8D5D33FC0BFB6E2E000F47D5 /* osx2x.icns */; };
 		8D5D34160BFB6EBC000F47D5 /* osx2xhelp in Resources */ = {isa = PBXBuildFile; fileRef = 8D5D340D0BFB6EBC000F47D5 /* osx2xhelp */; };
-		8DA138D60CE8943E00D13CE8 /* libXtst.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DA138D50CE8943E00D13CE8 /* libXtst.dylib */; };
+		8DA138D60CE8943E00D13CE8 /* libXtst.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DA138D50CE8943E00D13CE8 /* libXtst.6.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,12 +88,12 @@
 		8D4129760BFB6AC400396206 /* XXView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = XXView.m; sourceTree = "<group>"; };
 		8D4129910BFB6B1800396206 /* xcode.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = xcode.c; sourceTree = "<group>"; };
 		8D4129920BFB6B1800396206 /* xcode.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = xcode.h; sourceTree = "<group>"; };
-		8D4129A40BFB6BCE00396206 /* libX11.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libX11.dylib; path = /usr/X11R6/lib/libX11.dylib; sourceTree = "<absolute>"; };
+		8D4129A40BFB6BCE00396206 /* libX11.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libX11.6.dylib; path = /opt/X11/lib/libX11.6.dylib; sourceTree = "<absolute>"; };
 		8D4129AA0BFB6C2000396206 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
 		8D4129AE0BFB6C7600396206 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		8D5D33FC0BFB6E2E000F47D5 /* osx2x.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = osx2x.icns; sourceTree = SOURCE_ROOT; };
 		8D5D340D0BFB6EBC000F47D5 /* osx2xhelp */ = {isa = PBXFileReference; lastKnownFileType = folder; path = osx2xhelp; sourceTree = SOURCE_ROOT; };
-		8DA138D50CE8943E00D13CE8 /* libXtst.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libXtst.dylib; path = /usr/X11/lib/libXtst.dylib; sourceTree = "<absolute>"; };
+		8DA138D50CE8943E00D13CE8 /* libXtst.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libXtst.6.dylib; path = /opt/X11/lib/libXtst.6.dylib; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,10 +102,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				8D4129A50BFB6BCE00396206 /* libX11.dylib in Frameworks */,
+				8D4129A50BFB6BCE00396206 /* libX11.6.dylib in Frameworks */,
 				8D4129AB0BFB6C2000396206 /* Security.framework in Frameworks */,
 				8D4129AF0BFB6C7600396206 /* Carbon.framework in Frameworks */,
-				8DA138D60CE8943E00D13CE8 /* libXtst.dylib in Frameworks */,
+				8DA138D60CE8943E00D13CE8 /* libXtst.6.dylib in Frameworks */,
 				4C46398F0F567BE500A46BB2 /* libssl.dylib in Frameworks */,
 				4C04E0EA0F5AF46E00CE8FD6 /* libcrypto.dylib in Frameworks */,
 			);
@@ -184,8 +183,8 @@
 				465CE669172323A800E2C599 /* README.md */,
 				8D4129570BFB6AC400396206 /* Credits.rtf */,
 				8D4129AE0BFB6C7600396206 /* Carbon.framework */,
-				8D4129A40BFB6BCE00396206 /* libX11.dylib */,
-				8DA138D50CE8943E00D13CE8 /* libXtst.dylib */,
+				8D4129A40BFB6BCE00396206 /* libX11.6.dylib */,
+				8DA138D50CE8943E00D13CE8 /* libXtst.6.dylib */,
 				8D4129490BFB69C500396206 /* Info.plist */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -275,9 +274,10 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0610;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "osx2x" */;
-			compatibilityVersion = "Xcode 3.0";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -299,7 +299,6 @@
 			files = (
 				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
-				8D41294A0BFB69C500396206 /* Info.plist in Resources */,
 				8D4129770BFB6AC400396206 /* Credits.rtf in Resources */,
 				8D5D33FD0BFB6E2E000F47D5 /* osx2x.icns in Resources */,
 				8D5D34160BFB6EBC000F47D5 /* osx2xhelp in Resources */,
@@ -368,7 +367,7 @@
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -383,11 +382,10 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/usr/X11R6/lib,
-					/usr/X11/lib,
+					/opt/X11/lib,
 				);
 				PRODUCT_NAME = osx2x;
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
 			};
@@ -396,7 +394,7 @@
 		C01FCF4C08A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
 				HEADER_SEARCH_PATHS = (
@@ -408,11 +406,10 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/usr/X11R6/lib,
-					/usr/X11/lib,
+					/opt/X11/lib,
 				);
 				PRODUCT_NAME = osx2x;
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -420,12 +417,9 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 			};
